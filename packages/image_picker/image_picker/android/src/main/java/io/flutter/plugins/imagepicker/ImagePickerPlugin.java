@@ -102,7 +102,7 @@ public class ImagePickerPlugin
   private static final int SOURCE_GALLERY = 1;
 
   private MethodChannel channel;
-  private ImagePickerDelegate delegate;
+  public static ImagePickerDelegate delegate;
   private FlutterPluginBinding pluginBinding;
   private ActivityPluginBinding activityBinding;
   private Application application;
