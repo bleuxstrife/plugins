@@ -56,7 +56,7 @@ public class GoogleSignInPlugin implements MethodCallHandler, FlutterPlugin, Act
   private static final String METHOD_CLEAR_AUTH_CACHE = "clearAuthCache";
   private static final String METHOD_REQUEST_SCOPES = "requestScopes";
 
-  private Delegate delegate;
+  public static Delegate delegate;
   private MethodChannel channel;
   private ActivityPluginBinding activityPluginBinding;
 
@@ -242,7 +242,7 @@ public class GoogleSignInPlugin implements MethodCallHandler, FlutterPlugin, Act
    * to guarantee such behavior; callers are responsible for providing such guarantees.
    */
   public static class Delegate implements IDelegate, PluginRegistry.ActivityResultListener {
-    private static final int REQUEST_CODE_SIGNIN = 53293;
+    public static final int REQUEST_CODE_SIGNIN = 53293;
     private static final int REQUEST_CODE_RECOVER_AUTH = 53294;
     @VisibleForTesting static final int REQUEST_CODE_REQUEST_SCOPE = 53295;
 
